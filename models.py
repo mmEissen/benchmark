@@ -12,4 +12,6 @@ class Item(models.Model):
 class Measurement(models.Model):
 
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
+    start_time = models.DateTimeField()
+    end_time = models.DateTimeField()
     time_delta = models.DurationField()

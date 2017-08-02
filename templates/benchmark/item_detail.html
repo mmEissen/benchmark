@@ -2,7 +2,7 @@
 <p>Average: {{ average }}</p>
 <p>Measurements:</p>
 {% for measurement in object.measurement_set.all %}
-<p>{{ measurement.time_delta }}</p>
+  <p>{{ measurement.time_delta }}</p>
 {% empty %}
-<p>No measurements</p>
+  <p>No measurements</p>
 {% endfor %}
