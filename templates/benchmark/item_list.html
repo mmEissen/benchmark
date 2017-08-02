@@ -1,8 +1,12 @@
 <h1>Measured Items</h1>
 <ul>
 {% for item in object_list %}
-    <li>{{ item.name }}</li>
+    <li>
+      <a href="{% url 'benchmark-item-detail' item.name %}">
+        {{ item.name }}
+      </a>
+    </li>
 {% empty %}
     <li>No items yet.</li>
 {% endfor %}
-</ul>/
+</ul>
